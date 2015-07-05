@@ -69,16 +69,18 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- http://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-in-maven-project -->
+        <!-- Push lire.jar from lire simple app to local maven repo. See lib/mvn_install.sh -->
         <dependency>
-            <groupId>com.github.kzwang</groupId>  <!-- Modified to deploy on maven -->
+            <groupId>com.github.kzwang</groupId>
             <artifactId>lire</artifactId>
-            <version>0.9.4-kzwang-beta1</version>
+            <version>1.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.twelvemonkeys.imageio</groupId> <!-- Some jpg images failed to parse by standard Java ImageIO, this plugin will fix that -->
             <artifactId>imageio-jpeg</artifactId>
-            <version>3.0-rc5</version>
+            <version>3.0</version>
         </dependency>
 
         <dependency>
@@ -127,7 +129,7 @@
         <dependency>
             <groupId>com.twelvemonkeys.imageio</groupId>
             <artifactId>imageio-tiff</artifactId>
-            <version>3.0-rc5</version>
+            <version>3.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -160,7 +162,7 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <plugin>
+            <!-- <plugin>
                 <groupId>com.carrotsearch.randomizedtesting</groupId>
                 <artifactId>junit4-maven-plugin</artifactId>
                 <version>2.1.1</version>
@@ -206,7 +208,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <!-- we skip surefire to work with randomized testing above -->
                 <groupId>org.apache.maven.plugins</groupId>

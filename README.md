@@ -13,11 +13,17 @@ In order to install the plugin, simply run: `bin/plugin -install com.github.kzwa
 
 |     Image Plugin          |  elasticsearch    | Release date |
 |---------------------------|-------------------|:------------:|
-| 1.3.0-SNAPSHOT (master)   | 1.1.0             |              |
+| 1.4.0-SNAPSHOT (master)   | 1.4.2             |              |
+| 1.3.0-SNAPSHOT (master)   | 1.3.0             |              |
 | 1.2.0                     | 1.0.1             | 2014-03-20   |
 | 1.1.0                     | 1.0.1             | 2014-03-13   |
 | 1.0.0                     | 1.0.1             | 2014-03-05   |
 
+To Install Plugin for local repo:
+mvn clean package
+bin/plugin --remove elasticsearch-image
+bin/plugin --verbose -install elasticsearch-image \
+ -u file:///<repo-dir>/target/releases/elasticsearch-image-1.4.0-SNAPSHOT.zip
 
 ## Example
 #### Create Mapping
