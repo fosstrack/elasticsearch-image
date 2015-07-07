@@ -21,7 +21,9 @@ In order to install the plugin, simply run: `bin/plugin -install com.github.kzwa
 
 To Install Plugin for local repo:
 mvn clean package
+
 bin/plugin --remove elasticsearch-image
+
 bin/plugin --verbose -install elasticsearch-image \
  -u file:///<repo-dir>/target/releases/elasticsearch-image-1.4.0-SNAPSHOT.zip
 
